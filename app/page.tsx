@@ -174,7 +174,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/60"></div>
           </div>
           <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center">
-            <h1 className="text-6xl md:text-8xl font-bold text-white mb-6">OPUS MUSIC COMPLEX</h1>
+            <h1 className="text-6xl md:text-8xl font-bold text-white mb-6">OPUS</h1>
             <p className="text-xl text-white/90 max-w-2xl mb-8">
               All aboard for a cultural journey where architecture meets acoustics
             </p>
