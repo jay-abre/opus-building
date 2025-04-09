@@ -95,7 +95,7 @@ export default function Home() {
           </div>
 
           <Link href="/" className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
-            <span className="text-xl font-bold tracking-tight text-[#1A1A1A]">OPUS MUSIC COMPLEX</span>
+            <span className="text-xl font-bold tracking-tight text-[#1A1A1A]">OPUS</span>
           </Link>
 
           <div className="flex items-center space-x-6">
@@ -174,7 +174,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/60"></div>
           </div>
           <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center">
-            <h1 className="text-6xl md:text-8xl font-bold text-white mb-6">OPUS</h1>
+            <h1 className="text-6xl md:text-8xl font-bold text-white mb-6">OPUS MUSIC COMPLEX</h1>
             <p className="text-xl text-white/90 max-w-2xl mb-8">
               All aboard for a cultural journey where architecture meets acoustics
             </p>
