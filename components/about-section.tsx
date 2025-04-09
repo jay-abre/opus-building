@@ -43,7 +43,7 @@ export default function AboutSection() {
           <div className="relative">
             <div className="relative h-[600px] overflow-hidden">
               <img
-                src="/placeholder.svg?height=600&width=500"
+                src="/images/RENDERS/CORNER.png"
                 alt="OPUS MUSIC COMPLEX exterior"
                 className="h-full w-full object-cover"
               />

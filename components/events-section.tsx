@@ -19,19 +19,19 @@ export default function EventsSection() {
             title="Philippine Philharmonic Orchestra"
             date="Jun 15—29, 2025"
             location="Toccata Concert Hall"
-            image="/placeholder.svg?height=400&width=600"
+            image="/images/philharmonic.jpg"
           />
           <EventCard
-            title="Passengers"
+            title="THE MNY"
             date="Jul 12—29, 2025"
             location="Sonata Music Hall"
-            image="/placeholder.svg?height=400&width=600"
+            image="/images/mny.jpg"
           />
           <EventCard
-            title="Acoustic Innovations"
+            title="Film Concert"
             date="Aug 5—15, 2025"
             location="Opus Gallery"
-            image="/placeholder.svg?height=400&width=600"
+            image="/images/film concert.jpeg"
             limited={true}
           />
         </div>

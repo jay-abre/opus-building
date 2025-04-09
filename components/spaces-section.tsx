@@ -29,37 +29,37 @@ export default function SpacesSection() {
               <SpaceCard
                 title="Toccata Concert Hall"
                 description="Our flagship venue features exceptional acoustics designed for orchestral performances, with seating for 1,200 guests."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/TOCCATA.png"
                 hasImage={true}
               />
               <SpaceCard
                 title="Grand Lobby"
                 description="An elegant space perfect for receptions, exhibitions, and networking events with stunning architectural features."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/MAIN LOBBY.png"
                 hasImage={true}
               />
               <SpaceCard
                 title="Sonata Music Hall"
                 description="A versatile mid-sized venue ideal for chamber music, recitals, and intimate performances."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/SON STAGE POV.png"
                 hasImage={true}
               />
               <SpaceCard
                 title="Opus Gallery"
                 description="A contemporary exhibition space for visual arts that complements our musical programming."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/IMG_4124.jpg"
                 hasImage={true}
               />
               <SpaceCard
                 title="Function Halls"
                 description="Multiple configurable spaces for conferences, workshops, and private events."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/TOC LAYOUT 1.png"
                 hasImage={true}
               />
               <SpaceCard
                 title="Rehearsal Spaces"
                 description="Professional-grade rehearsal rooms with excellent acoustics for performers."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/SOUND BOOTH.png"
                 hasImage={true}
               />
               <SpaceCard
@@ -85,31 +85,31 @@ export default function SpacesSection() {
               <SpaceCard
                 title="Outdoor Park"
                 description="A beautifully landscaped area for outdoor performances and relaxation."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/AL FRESCO.png"
                 hasImage={true}
               />
               <SpaceCard
                 title="Sound Art Exhibit Area"
                 description="Interactive installations exploring the intersection of sound and visual art."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/SOUND ART INSTALLATIONS.png"
                 hasImage={true}
               />
               <SpaceCard
                 title="Upper Plaza"
                 description="An elevated public space with panoramic views of Clark Global City."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/UPPER PLAZA.png"
                 hasImage={true}
               />
               <SpaceCard
                 title="Promenade"
                 description="A scenic walkway connecting different areas of the complex."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/CORNER.png"
                 hasImage={true}
               />
               <SpaceCard
                 title="Oasis"
                 description="A tranquil indoor garden with water features and acoustic design elements."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/OASIS.png"
                 hasImage={true}
               />
               <SpaceCard

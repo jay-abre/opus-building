@@ -46,7 +46,7 @@ export default function VisitSection() {
           <div className="relative">
             <div className="h-[500px] overflow-hidden">
               <img
-                src="/placeholder.svg?height=500&width=600"
+                src="/images/RENDERS/ISO A.png"
                 alt="Map of OPUS MUSIC COMPLEX location"
                 className="h-full w-full object-cover"
               />
