@@ -30,7 +30,7 @@ export default function EventCard({ title, date, location, image, href = "#", li
           <Button className="bg-white hover:bg-gray-200 text-black">Buy Tickets</Button>
         </div>
 
-        {limited && <p className="text-sm text-gray-400 mt-2">Limited Availability</p>}
+       {/* {limited && <p className="text-sm text-gray-400 mt-2">Limited Availability</p>} */}
       </div>
     </div>
   )

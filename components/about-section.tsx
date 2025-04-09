@@ -5,7 +5,7 @@ export default function AboutSection() {
         <div className="flex flex-col md:flex-row justify-between items-start mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A1A]">About Us</h2>
           <p className="text-[#1A1A1A] max-w-md text-lg mt-4 md:mt-0">
-            A cultural landmark where architecture and acoustics create transformative experiences.
+          Located at the heart of Clark Global City, Mabalacat, Pampanga
           </p>
         </div>
 

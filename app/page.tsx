@@ -10,10 +10,34 @@ import EventsSection from "@/components/events-section"
 import SpacesSection from "@/components/spaces-section"
 import VisitSection from "@/components/visit-section"
 import ContactSection from "@/components/contact-section"
+import HeroSlideshow from "@/components/hero-slideshow"
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home")
   const [isScrolled, setIsScrolled] = useState(false)
+
+  const heroSlides = [
+    {
+      image: "/images/RENDERS/STAR HIGH RES.png",
+      title: "OPUS MUSIC COMPLEX",
+      subtitle: "All aboard for a cultural journey where architecture meets acoustics",
+    },
+    {
+      image: "/images/RENDERS/TOCCATA.png",
+      title: "TOCCATA CONCERT HALL",
+      subtitle: "Experience world-class performances in our flagship venue",
+    },
+    {
+      image: "/images/RENDERS/SON UPPER BOX.png",
+      title: "SONATA MUSIC HALL",
+      subtitle: "An intimate setting for chamber music and recitals",
+    },
+    {
+      image: "/images/RENDERS/UPPER PLAZA.png",
+      title: "OPUS GALLERY",
+      subtitle: "Where visual arts complement our musical programming",
+    },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,14 +67,14 @@ export default function Home() {
     <div className="flex min-h-screen flex-col bg-[#F2F1E8]">
       <header
         className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-          isScrolled ? "bg-[#F2F1E8] border-b border-[#E5E3D7] shadow-sm" : "bg-[#F2F1E8]"
+          isScrolled ? "bg-[#F2F1E8] border-b border-[#E5E3D7] shadow-sm" : "bg-transparent"
         }`}
       >
         <div className="container flex h-20 items-center justify-between px-4 md:px-8">
           <div className="flex items-center space-x-10">
             <Sheet>
               <SheetTrigger>
-                <div className="flex items-center cursor-pointer px-2 py-1">
+                <div className="flex items-center cursor-pointer px-2 py-1 hover:text-[#8B7E66] transition-colors">
                   <Menu className="h-5 w-5 mr-2" />
                   <span className="font-medium">Menu</span>
                 </div>
@@ -81,13 +105,17 @@ export default function Home() {
             <div className="hidden md:flex items-center space-x-8">
               <Link
                 href="#events"
-                className="text-[#1A1A1A] hover:text-[#8B7E66] transition-colors flex items-center font-medium"
+                className={`transition-colors flex items-center font-medium ${
+                  isScrolled ? "text-[#1A1A1A] hover:text-[#8B7E66]" : "text-white hover:text-white/80"
+                }`}
               >
                 Events & Tickets <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
               <Link
                 href="#contact"
-                className="text-[#1A1A1A] hover:text-[#8B7E66] transition-colors flex items-center font-medium"
+                className={`transition-colors flex items-center font-medium ${
+                  isScrolled ? "text-[#1A1A1A] hover:text-[#8B7E66]" : "text-white hover:text-white/80"
+                }`}
               >
                 Join & Support <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
@@ -95,12 +123,22 @@ export default function Home() {
           </div>
 
           <Link href="/" className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
-            <span className="text-xl font-bold tracking-tight text-[#1A1A1A]">OPUS</span>
+            <span
+              className={`text-xl font-bold tracking-tight transition-colors ${
+                isScrolled ? "text-[#1A1A1A]" : "text-white"
+              }`}
+            >
+              OPUS MUSIC COMPLEX
+            </span>
           </Link>
 
           <div className="flex items-center space-x-6">
             <div className="hidden md:block relative group">
-              <div className="text-xs text-[#1A1A1A] px-3 py-2 border border-transparent hover:border-[#E5E3D7] rounded-sm cursor-default">
+              <div
+                className={`text-xs px-3 py-2 border border-transparent hover:border-[#E5E3D7] rounded-sm cursor-default ${
+                  isScrolled ? "text-[#1A1A1A]" : "text-white"
+                }`}
+              >
                 <span className="block font-medium">Open today</span>
                 <div className="flex items-center">
                   <Clock className="h-3 w-3 mr-1" />
@@ -144,14 +182,32 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center space-x-1">
-              <Button variant="ghost" size="icon" className="h-10 w-10 rounded-full">
+              <Button
+                variant="ghost"
+                size="icon"
+                className={`h-10 w-10 rounded-full ${
+                  isScrolled ? "text-[#1A1A1A] hover:bg-[#1A1A1A]/10" : "text-white hover:bg-white/10"
+                }`}
+              >
                 <Search className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="h-10 w-10 rounded-full">
+              <Button
+                variant="ghost"
+                size="icon"
+                className={`h-10 w-10 rounded-full ${
+                  isScrolled ? "text-[#1A1A1A] hover:bg-[#1A1A1A]/10" : "text-white hover:bg-white/10"
+                }`}
+              >
                 <User className="h-5 w-5" />
                 <span className="sr-only">Log in</span>
               </Button>
-              <Button variant="ghost" size="icon" className="h-10 w-10 rounded-full">
+              <Button
+                variant="ghost"
+                size="icon"
+                className={`h-10 w-10 rounded-full ${
+                  isScrolled ? "text-[#1A1A1A] hover:bg-[#1A1A1A]/10" : "text-white hover:bg-white/10"
+                }`}
+              >
                 <ShoppingCart className="h-5 w-5" />
                 <span className="sr-only">Cart</span>
               </Button>
@@ -160,37 +216,28 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex-1 pt-16">
+      <main className="flex-1">
         {/* 1. HOME */}
         <section id="home" className="relative h-screen overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <div className="h-full w-full">
-              <img
-                src="/placeholder.svg?height=1080&width=1920"
-                alt="Symphonic Skies architectural exterior"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="absolute inset-0 bg-black/60"></div>
-          </div>
-          <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center">
-            <h1 className="text-6xl md:text-8xl font-bold text-white mb-6">OPUS MUSIC COMPLEX</h1>
-            <p className="text-xl text-white/90 max-w-2xl mb-8">
-              All aboard for a cultural journey where architecture meets acoustics
-            </p>
-            <p className="text-white text-xl mb-12">Jun 2025 – Opening Season</p>
-            <div className="flex gap-4">
-              <Link href="#about" className="inline-block">
-                <Button className="bg-[#F2F1E8] hover:bg-white text-black rounded-none px-8 py-6">
-                  Learn more <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="#events" className="inline-block">
-                <Button className="bg-black hover:bg-[#333] text-white rounded-none px-8 py-6">Buy Tickets</Button>
-              </Link>
+          <HeroSlideshow slides={heroSlides} />
+
+          <div className="container relative z-20 flex h-full flex-col items-center justify-center text-center">
+            <div className="mt-auto mb-32">
+              <p className="text-white text-xl mb-12">Jun 2025 – Opening Season</p>
+              <div className="flex gap-4">
+                <Link href="#about" className="inline-block">
+                  <Button className="bg-[#F2F1E8] hover:bg-white text-black rounded-none px-8 py-6">
+                    Learn more <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link href="#events" className="inline-block">
+                  <Button className="bg-black hover:bg-[#333] text-white rounded-none px-8 py-6">Buy Tickets</Button>
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="absolute bottom-12 left-0 right-0 flex justify-center">
+
+          <div className="absolute bottom-12 left-0 right-0 flex justify-center z-20">
             <Link href="#about" className="animate-bounce">
               <ChevronDown className="h-8 w-8 text-white" />
             </Link>
