@@ -38,7 +38,6 @@ export default function Home() {
       subtitle: "Where visual arts complement our musical programming",
     },
   ]
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY
@@ -70,16 +69,16 @@ export default function Home() {
           isScrolled ? "bg-[#F2F1E8] border-b border-[#E5E3D7] shadow-sm" : "bg-transparent"
         }`}
       >
-        <div className="container flex h-20 items-center justify-between px-4 md:px-8">
-          <div className="flex items-center space-x-10">
+        <div className="container flex h-16 md:h-20 items-center justify-between px-4 md:px-8">
+          <div className="flex items-center">
             <Sheet>
               <SheetTrigger>
                 <div className="flex items-center cursor-pointer px-2 py-1 hover:text-[#8B7E66] transition-colors">
                   <Menu className="h-5 w-5 mr-2" />
-                  <span className="font-medium">Menu</span>
+                  <span className="font-medium text-sm md:text-base">Menu</span>
                 </div>
               </SheetTrigger>
-              <SheetContent side="left" className="bg-[#F2F1E8] w-80">
+              <SheetContent side="left" className="bg-[#F2F1E8] w-[280px] sm:w-[350px]">
                 <div className="flex flex-col gap-1 mt-12">
                   <h3 className="text-xs uppercase tracking-wider text-[#8B7E66] font-medium mb-3">Navigation</h3>
                   {[
@@ -98,11 +97,45 @@ export default function Home() {
                       {item.label}
                     </Link>
                   ))}
+
+                  <div className="mt-8 pt-4 border-t border-[#E5E3D7]">
+                    <h3 className="text-xs uppercase tracking-wider text-[#8B7E66] font-medium mb-3">Quick Links</h3>
+                    <Link
+                      href="#events"
+                      className="text-[#1A1A1A] hover:text-[#8B7E66] transition-colors flex items-center py-2 border-b border-[#E5E3D7]"
+                    >
+                      Events & Tickets <ArrowRight className="ml-1 h-4 w-4" />
+                    </Link>
+                    <Link
+                      href="#contact"
+                      className="text-[#1A1A1A] hover:text-[#8B7E66] transition-colors flex items-center py-2 border-b border-[#E5E3D7]"
+                    >
+                      Join & Support <ArrowRight className="ml-1 h-4 w-4" />
+                    </Link>
+                  </div>
+
+                  <div className="mt-8 pt-4 border-t border-[#E5E3D7]">
+                    <h3 className="text-xs uppercase tracking-wider text-[#8B7E66] font-medium mb-3">Hours</h3>
+                    <div className="text-sm space-y-2">
+                      <div className="flex justify-between py-1 border-b border-[#E5E3D7]">
+                        <span className="text-[#1A1A1A] font-medium">Monday-Thursday</span>
+                        <span className="text-[#1A1A1A]">11am – 10pm</span>
+                      </div>
+                      <div className="flex justify-between py-1 border-b border-[#E5E3D7]">
+                        <span className="text-[#1A1A1A] font-medium">Friday-Saturday</span>
+                        <span className="text-[#1A1A1A]">10am – 11pm</span>
+                      </div>
+                      <div className="flex justify-between py-1">
+                        <span className="text-[#1A1A1A] font-medium">Sunday</span>
+                        <span className="text-[#1A1A1A]">10am – 10pm</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </SheetContent>
             </Sheet>
 
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center ml-10 space-x-8">
               <Link
                 href="#events"
                 className={`transition-colors flex items-center font-medium ${
@@ -124,15 +157,15 @@ export default function Home() {
 
           <Link href="/" className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
             <span
-              className={`text-xl font-bold tracking-tight transition-colors ${
+              className={`text-base md:text-xl font-bold tracking-tight transition-colors ${
                 isScrolled ? "text-[#1A1A1A]" : "text-white"
               }`}
             >
-              OPUS MUSIC COMPLEX
+              OPUS 
             </span>
           </Link>
 
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center">
             <div className="hidden md:block relative group">
               <div
                 className={`text-xs px-3 py-2 border border-transparent hover:border-[#E5E3D7] rounded-sm cursor-default ${
@@ -185,30 +218,30 @@ export default function Home() {
               <Button
                 variant="ghost"
                 size="icon"
-                className={`h-10 w-10 rounded-full ${
+                className={`h-8 w-8 md:h-10 md:w-10 rounded-full ${
                   isScrolled ? "text-[#1A1A1A] hover:bg-[#1A1A1A]/10" : "text-white hover:bg-white/10"
                 }`}
               >
-                <Search className="h-5 w-5" />
+                <Search className="h-4 w-4 md:h-5 md:w-5" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className={`h-10 w-10 rounded-full ${
+                className={`h-8 w-8 md:h-10 md:w-10 rounded-full ${
                   isScrolled ? "text-[#1A1A1A] hover:bg-[#1A1A1A]/10" : "text-white hover:bg-white/10"
                 }`}
               >
-                <User className="h-5 w-5" />
+                <User className="h-4 w-4 md:h-5 md:w-5" />
                 <span className="sr-only">Log in</span>
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className={`h-10 w-10 rounded-full ${
+                className={`h-8 w-8 md:h-10 md:w-10 rounded-full ${
                   isScrolled ? "text-[#1A1A1A] hover:bg-[#1A1A1A]/10" : "text-white hover:bg-white/10"
                 }`}
               >
-                <ShoppingCart className="h-5 w-5" />
+                <ShoppingCart className="h-4 w-4 md:h-5 md:w-5" />
                 <span className="sr-only">Cart</span>
               </Button>
             </div>
@@ -222,24 +255,26 @@ export default function Home() {
           <HeroSlideshow slides={heroSlides} />
 
           <div className="container relative z-20 flex h-full flex-col items-center justify-center text-center">
-            <div className="mt-auto mb-32">
-              <p className="text-white text-xl mb-12">Jun 2025 – Opening Season</p>
-              <div className="flex gap-4">
+            <div className="mt-auto mb-20 md:mb-32 px-4">
+              <p className="text-lg md:text-xl text-white mb-8 md:mb-12">Jun 2025 – Opening Season</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="#about" className="inline-block">
-                  <Button className="bg-[#F2F1E8] hover:bg-white text-black rounded-none px-8 py-6">
-                    Learn more <ArrowRight className="ml-2 h-5 w-5" />
+                  <Button className="bg-[#F2F1E8] hover:bg-white text-black rounded-none px-6 py-5 md:px-8 md:py-6 w-full sm:w-auto">
+                    Learn more <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
                   </Button>
                 </Link>
                 <Link href="#events" className="inline-block">
-                  <Button className="bg-black hover:bg-[#333] text-white rounded-none px-8 py-6">Buy Tickets</Button>
+                  <Button className="bg-black hover:bg-[#333] text-white rounded-none px-6 py-5 md:px-8 md:py-6 w-full sm:w-auto">
+                    Buy Tickets
+                  </Button>
                 </Link>
               </div>
             </div>
           </div>
 
-          <div className="absolute bottom-12 left-0 right-0 flex justify-center z-20">
+          <div className="absolute bottom-8 md:bottom-12 left-0 right-0 flex justify-center z-20">
             <Link href="#about" className="animate-bounce">
-              <ChevronDown className="h-8 w-8 text-white" />
+              <ChevronDown className="h-6 w-6 md:h-8 md:w-8 text-white" />
             </Link>
           </div>
         </section>
@@ -260,21 +295,21 @@ export default function Home() {
         <ContactSection />
       </main>
 
-      <footer className="border-t border-[#E5E3D7] bg-[#F2F1E8] py-16">
+      <footer className="border-t border-[#E5E3D7] bg-[#F2F1E8] py-12 md:py-16">
         <div className="container px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
             <div className="md:col-span-2">
-              <div className="flex items-center gap-2 mb-6">
-                <span className="text-lg font-bold tracking-tight text-[#1A1A1A]">OPUS MUSIC COMPLEX</span>
+              <div className="flex items-center gap-2 mb-4 md:mb-6">
+                <span className="text-base md:text-lg font-bold tracking-tight text-[#1A1A1A]">OPUS MUSIC COMPLEX</span>
               </div>
-              <p className="text-[#1A1A1A] max-w-xs">
+              <p className="text-sm md:text-base text-[#1A1A1A] max-w-xs">
                 Elevating the Cultural Scene through Architecture and Interdisciplinary Approaches in Clark Global City,
                 Philippines
               </p>
             </div>
             <div>
-              <h3 className="font-bold text-[#1A1A1A] mb-4 uppercase text-sm tracking-widest">Explore</h3>
-              <ul className="space-y-3">
+              <h3 className="font-bold text-[#1A1A1A] mb-3 md:mb-4 uppercase text-sm tracking-widest">Explore</h3>
+              <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
                 <li>
                   <Link href="#home" className="text-[#1A1A1A] hover:text-[#8B7E66]">
                     Home
@@ -298,8 +333,8 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-[#1A1A1A] mb-4 uppercase text-sm tracking-widest">Visit</h3>
-              <ul className="space-y-3">
+              <h3 className="font-bold text-[#1A1A1A] mb-3 md:mb-4 uppercase text-sm tracking-widest">Visit</h3>
+              <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
                 <li>
                   <Link href="#visit" className="text-[#1A1A1A] hover:text-[#8B7E66]">
                     Visit Us
@@ -318,7 +353,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <div className="mt-16 border-t border-[#E5E3D7] pt-8 text-center text-[#1A1A1A]">
+          <div className="mt-10 md:mt-16 border-t border-[#E5E3D7] pt-6 md:pt-8 text-center text-[#1A1A1A] text-sm">
             <p>© 2025 OPUS MUSIC COMPLEX. All rights reserved.</p>
           </div>
         </div>
