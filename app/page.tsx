@@ -11,7 +11,7 @@ import SpacesSection from "@/components/spaces-section"
 import VisitSection from "@/components/visit-section"
 import ContactSection from "@/components/contact-section"
 import HeroSlideshow from "@/components/hero-slideshow"
-
+import PromoSection from "@/components/promo-section"
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home")
   const [isScrolled, setIsScrolled] = useState(false)
@@ -343,10 +343,15 @@ export default function Home() {
         {/* 4. SPACES */}
         <SpacesSection />
 
+ {/* 6. PROMO SECTION */}
+ <PromoSection />
+
         {/* 5. VISIT US */}
         <VisitSection />
 
-        {/* 6. CONTACT US */}
+        
+
+        {/* 7. CONTACT US */}
         <ContactSection />
       </main>
 
