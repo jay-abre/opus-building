@@ -29,7 +29,7 @@ export default function SpacesSection() {
               <SpaceCard
                 title="Toccata Concert Hall"
                 description="Our flagship venue features exceptional acoustics designed for orchestral performances, with seating for 1,200 guests."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/TOCCATA.png"
                 hasImage={true}
               />
               <SpaceCard

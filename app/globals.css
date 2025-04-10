@@ -1,9 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Agrandir+Grand:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
 body {
-  font-family: Agrandir Grand, Monserrat, sans-serif;
+  font-family: 'Montserrat';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Agrandir Grand';
 }
 
 @layer utilities {
