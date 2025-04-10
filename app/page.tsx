@@ -18,22 +18,22 @@ export default function Home() {
 
   const heroSlides = [
     {
-      image: "/placeholder.svg?height=1080&width=1920",
+      image: "/images/RENDERS/STAR HIGH RES.png",
       title: "OPUS MUSIC COMPLEX",
       subtitle: "All aboard for a cultural journey where architecture meets acoustics",
     },
     {
-      image: "/placeholder.svg?height=1080&width=1920&text=Concert+Hall",
+      image: "/images/RENDERS/TOCCATA.png",
       title: "TOCCATA CONCERT HALL",
-      subtitle: "Experience world-class performances in our flagship venue",
+      subtitle: "Versatile by design, exceptional by experience.",
     },
     {
-      image: "/placeholder.svg?height=1080&width=1920&text=Music+Hall",
+      image: "/images/RENDERS/SON UPPER BOX.png",
       title: "SONATA MUSIC HALL",
-      subtitle: "An intimate setting for chamber music and recitals",
+      subtitle: "",
     },
     {
-      image: "/placeholder.svg?height=1080&width=1920&text=Gallery",
+      image: "/images/RENDERS/UPPER PLAZA.png",
       title: "OPUS GALLERY",
       subtitle: "Where visual arts complement our musical programming",
     },
@@ -308,24 +308,25 @@ export default function Home() {
         {/* 1. HOME */}
         <section id="home" className="relative h-screen overflow-hidden">
           <HeroSlideshow slides={heroSlides} />
-          // Update the CTA section to maintain consistent layout between mobile and desktop
+
           <div className="container relative z-20 flex h-full flex-col items-center justify-center text-center">
-            <div className="mt-auto mb-16 px-4">
+            <div className="mt-auto mb-16 md:mb-24 px-4">
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="#about" className="inline-block">
-                  <Button className="bg-[#F2F1E8] hover:bg-white text-black rounded-none px-6 py-4 w-full">
-                    Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button className="bg-[#F2F1E8] hover:bg-white text-black rounded-none px-6 py-5 md:px-8 md:py-6 w-full sm:w-auto">
+                    Learn more <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
                   </Button>
                 </Link>
                 <Link href="#events" className="inline-block">
-                  <Button className="bg-black hover:bg-[#333] text-white rounded-none px-6 py-4 w-full">
+                  <Button className="bg-black hover:bg-[#333] text-white rounded-none px-6 py-5 md:px-8 md:py-6 w-full sm:w-auto">
                     Buy Tickets
                   </Button>
                 </Link>
               </div>
-              <p className="text-lg text-white opacity-80 mt-6">Jun 2025 – Opening Season</p>
+              <p className="text-lg md:text-xl text-white opacity-80 mt-8 md:mt-12">Jun 2025 – Opening Season</p>
             </div>
           </div>
+
           <div className="absolute bottom-8 md:bottom-12 left-0 right-0 flex justify-center z-20">
             <Link href="#about" className="animate-bounce">
               <ChevronDown className="h-6 w-6 md:h-8 md:w-8 text-white" />
