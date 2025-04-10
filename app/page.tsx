@@ -38,6 +38,7 @@ export default function Home() {
       subtitle: "Where visual arts complement our musical programming",
     },
   ]
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY
@@ -161,11 +162,62 @@ export default function Home() {
                 isScrolled ? "text-[#1A1A1A]" : "text-white"
               }`}
             >
-              OPUS 
+              OPUS
             </span>
           </Link>
 
           <div className="flex items-center">
+            {/* Open Today - Visible on mobile */}
+            <div className="block md:hidden relative group">
+              <div
+                className={`text-xs px-3 py-2 border border-transparent hover:border-[#E5E3D7] rounded-sm cursor-default ${
+                  isScrolled ? "text-[#1A1A1A]" : "text-white"
+                }`}
+              >
+                <span className="block font-medium">Open today</span>
+                <div className="flex items-center">
+                  <Clock className="h-3 w-3 mr-1" />
+                  <span>11am – 10pm</span>
+                </div>
+              </div>
+              <div className="absolute top-full right-0 mt-1 w-52 bg-white shadow-lg rounded-sm z-50 hidden group-hover:block border border-[#E5E3D7]">
+                <div className="p-3">
+                  <h4 className="font-medium text-xs mb-3 text-[#1A1A1A] uppercase tracking-wider">Weekly Hours</h4>
+                  <ul className="text-xs space-y-2">
+                    <li className="flex justify-between py-1 border-b border-[#F2F1E8]">
+                      <span className="text-[#1A1A1A] font-medium">Monday</span>
+                      <span className="text-[#1A1A1A]">11am – 10pm</span>
+                    </li>
+                    <li className="flex justify-between py-1 border-b border-[#F2F1E8]">
+                      <span className="text-[#1A1A1A] font-medium">Tuesday</span>
+                      <span className="text-[#1A1A1A]">11am – 10pm</span>
+                    </li>
+                    <li className="flex justify-between py-1 border-b border-[#F2F1E8]">
+                      <span className="text-[#1A1A1A] font-medium">Wednesday</span>
+                      <span className="text-[#1A1A1A]">11am – 10pm</span>
+                    </li>
+                    <li className="flex justify-between py-1 border-b border-[#F2F1E8]">
+                      <span className="text-[#1A1A1A] font-medium">Thursday</span>
+                      <span className="text-[#1A1A1A]">11am – 10pm</span>
+                    </li>
+                    <li className="flex justify-between py-1 border-b border-[#F2F1E8]">
+                      <span className="text-[#1A1A1A] font-medium">Friday</span>
+                      <span className="text-[#1A1A1A]">10am – 11pm</span>
+                    </li>
+                    <li className="flex justify-between py-1 border-b border-[#F2F1E8]">
+                      <span className="text-[#1A1A1A] font-medium">Saturday</span>
+                      <span className="text-[#1A1A1A]">10am – 11pm</span>
+                    </li>
+                    <li className="flex justify-between py-1">
+                      <span className="text-[#1A1A1A] font-medium">Sunday</span>
+                      <span className="text-[#1A1A1A]">10am – 10pm</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Open Today - Hidden on mobile, visible on desktop */}
             <div className="hidden md:block relative group">
               <div
                 className={`text-xs px-3 py-2 border border-transparent hover:border-[#E5E3D7] rounded-sm cursor-default ${
@@ -214,34 +266,36 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center space-x-1">
+
+            {/* Search, User, Cart icons - Hidden on mobile, visible on desktop */}
+            <div className="hidden md:flex items-center space-x-1">
               <Button
                 variant="ghost"
                 size="icon"
-                className={`h-8 w-8 md:h-10 md:w-10 rounded-full ${
+                className={`h-10 w-10 rounded-full ${
                   isScrolled ? "text-[#1A1A1A] hover:bg-[#1A1A1A]/10" : "text-white hover:bg-white/10"
                 }`}
               >
-                <Search className="h-4 w-4 md:h-5 md:w-5" />
+                <Search className="h-5 w-5" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className={`h-8 w-8 md:h-10 md:w-10 rounded-full ${
+                className={`h-10 w-10 rounded-full ${
                   isScrolled ? "text-[#1A1A1A] hover:bg-[#1A1A1A]/10" : "text-white hover:bg-white/10"
                 }`}
               >
-                <User className="h-4 w-4 md:h-5 md:w-5" />
+                <User className="h-5 w-5" />
                 <span className="sr-only">Log in</span>
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className={`h-8 w-8 md:h-10 md:w-10 rounded-full ${
+                className={`h-10 w-10 rounded-full ${
                   isScrolled ? "text-[#1A1A1A] hover:bg-[#1A1A1A]/10" : "text-white hover:bg-white/10"
                 }`}
               >
-                <ShoppingCart className="h-4 w-4 md:h-5 md:w-5" />
+                <ShoppingCart className="h-5 w-5" />
                 <span className="sr-only">Cart</span>
               </Button>
             </div>
