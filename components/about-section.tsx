@@ -22,7 +22,7 @@ export default function AboutSection() {
               fostering a vibrant ecosystem where musical traditions are honored and new expressions are born.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 md:mt-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 md:mt-12">
               <div className="border-l-4 border-[#1A1A1A] pl-4 md:pl-6">
                 <h3 className="text-lg md:text-xl font-bold text-[#1A1A1A] mb-2">Our Mission</h3>
                 <p className="text-[#1A1A1A] text-sm md:text-base">
@@ -43,7 +43,7 @@ export default function AboutSection() {
           <div className="relative">
             <div className="relative h-[400px] md:h-[600px] overflow-hidden">
               <img
-                src="/images/RENDERS/CORNER.png"
+                src="/placeholder.svg?height=600&width=500"
                 alt="OPUS MUSIC COMPLEX exterior"
                 className="h-full w-full object-cover"
               />

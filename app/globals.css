@@ -144,3 +144,44 @@ h1, h2, h3, h4, h5, h6 {
 .slide-content-enter {
   animation: slideUp 0.8s ease forwards;
 }
+
+/* Add these styles to ensure consistent layout on mobile */
+
+@media (max-width: 767px) {
+  /* Ensure content sections maintain desktop-like appearance */
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Improve touch targets on mobile */
+  button,
+  a {
+    min-height: 44px;
+  }
+
+  /* Ensure images scale properly */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Ensure slideshow maintains consistent appearance */
+.slide-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-subtitle {
+  margin-bottom: 80px;
+}

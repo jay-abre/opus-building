@@ -18,22 +18,22 @@ export default function Home() {
 
   const heroSlides = [
     {
-      image: "/images/RENDERS/STAR HIGH RES.png",
+      image: "/placeholder.svg?height=1080&width=1920",
       title: "OPUS MUSIC COMPLEX",
       subtitle: "All aboard for a cultural journey where architecture meets acoustics",
     },
     {
-      image: "/images/RENDERS/TOCCATA.png",
+      image: "/placeholder.svg?height=1080&width=1920&text=Concert+Hall",
       title: "TOCCATA CONCERT HALL",
       subtitle: "Experience world-class performances in our flagship venue",
     },
     {
-      image: "/images/RENDERS/SON UPPER BOX.png",
+      image: "/placeholder.svg?height=1080&width=1920&text=Music+Hall",
       title: "SONATA MUSIC HALL",
       subtitle: "An intimate setting for chamber music and recitals",
     },
     {
-      image: "/images/RENDERS/UPPER PLAZA.png",
+      image: "/placeholder.svg?height=1080&width=1920&text=Gallery",
       title: "OPUS GALLERY",
       subtitle: "Where visual arts complement our musical programming",
     },
@@ -157,13 +157,14 @@ export default function Home() {
           </div>
 
           <Link href="/" className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
-            <span
-              className={`text-base md:text-xl font-bold tracking-tight transition-colors ${
-                isScrolled ? "text-[#1A1A1A]" : "text-white"
-              }`}
-            >
-              OPUS
-            </span>
+            <div className={`relative transition-colors ${isScrolled ? "text-[#1A1A1A]" : "text-white"}`}>
+              <span className="text-xl md:text-2xl font-bold tracking-widest">OPUS</span>
+              <div
+                className={`absolute -bottom-1 left-0 w-full h-0.5 ${isScrolled ? "bg-[#8B7E66]" : "bg-white"} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}
+              ></div>
+              <div className="absolute -top-1 -left-1 w-2 h-2 rounded-full bg-[#8B7E66]"></div>
+              <div className="absolute -bottom-1 -right-1 w-2 h-2 rounded-full bg-[#8B7E66]"></div>
+            </div>
           </Link>
 
           <div className="flex items-center">
@@ -307,25 +308,24 @@ export default function Home() {
         {/* 1. HOME */}
         <section id="home" className="relative h-screen overflow-hidden">
           <HeroSlideshow slides={heroSlides} />
-
+          // Update the CTA section to maintain consistent layout between mobile and desktop
           <div className="container relative z-20 flex h-full flex-col items-center justify-center text-center">
-            <div className="mt-auto mb-20 md:mb-32 px-4">
-              <p className="text-lg md:text-xl text-white mb-8 md:mb-12">Jun 2025 – Opening Season</p>
+            <div className="mt-auto mb-16 px-4">
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="#about" className="inline-block">
-                  <Button className="bg-[#F2F1E8] hover:bg-white text-black rounded-none px-6 py-5 md:px-8 md:py-6 w-full sm:w-auto">
-                    Learn more <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+                  <Button className="bg-[#F2F1E8] hover:bg-white text-black rounded-none px-6 py-4 w-full">
+                    Learn more <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
                 <Link href="#events" className="inline-block">
-                  <Button className="bg-black hover:bg-[#333] text-white rounded-none px-6 py-5 md:px-8 md:py-6 w-full sm:w-auto">
+                  <Button className="bg-black hover:bg-[#333] text-white rounded-none px-6 py-4 w-full">
                     Buy Tickets
                   </Button>
                 </Link>
               </div>
+              <p className="text-lg text-white opacity-80 mt-6">Jun 2025 – Opening Season</p>
             </div>
           </div>
-
           <div className="absolute bottom-8 md:bottom-12 left-0 right-0 flex justify-center z-20">
             <Link href="#about" className="animate-bounce">
               <ChevronDown className="h-6 w-6 md:h-8 md:w-8 text-white" />

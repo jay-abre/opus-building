@@ -123,9 +123,11 @@ export default function HeroSlideshow({ slides, autoplaySpeed = 5000, className 
             <img src={slide.image || "/placeholder.svg"} alt={slide.title} className="h-full w-full object-cover" />
             <div className="absolute inset-0 bg-black/60"></div>
           </div>
+
+          {/* Title - Centered in the middle */}
           <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-4">
             <h2
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-4 md:mb-6 transition-transform duration-700 ease-out transform translate-y-0 opacity-100"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white transition-transform duration-700 ease-out transform translate-y-0 opacity-100"
               style={{
                 transitionDelay: "200ms",
                 transform: index === currentSlide ? "translateY(0)" : "translateY(20px)",
@@ -134,8 +136,12 @@ export default function HeroSlideshow({ slides, autoplaySpeed = 5000, className 
             >
               {slide.title}
             </h2>
+          </div>
+
+          {/* Subtitle - Positioned at the bottom */}
+          <div className="absolute bottom-24 left-0 right-0 z-10 text-center px-4">
             <p
-              className="text-base sm:text-lg md:text-xl text-white/90 max-w-xs sm:max-w-md md:max-w-2xl mb-8 transition-transform duration-700 ease-out"
+              className="text-base sm:text-lg md:text-xl text-white/90 max-w-xs sm:max-w-md md:max-w-2xl mx-auto transition-transform duration-700 ease-out"
               style={{
                 transitionDelay: "400ms",
                 transform: index === currentSlide ? "translateY(0)" : "translateY(20px)",
