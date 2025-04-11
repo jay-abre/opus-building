@@ -6,7 +6,7 @@ export default function PromoSection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="/placeholder.svg?height=600&width=1920&text=Night+View"
+          src="/images/RENDERS/TOC LAYOUT 2.png"
           alt="OPUS at night"
           className="w-full h-full object-cover"
         />

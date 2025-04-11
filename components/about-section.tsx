@@ -4,9 +4,9 @@ export default function AboutSection() {
       <div className="container px-4 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-start mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1A1A1A]">About Us</h2>
-          <p className="text-[#1A1A1A] max-w-md text-base md:text-lg mt-4 md:mt-0">
-            A cultural landmark where architecture and acoustics create transformative experiences.
-          </p>
+          {/* <p className="text-[#1A1A1A] max-w-md text-base md:text-lg mt-4 md:mt-0">
+            Located at Clark Global City
+          </p> */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -43,7 +43,7 @@ export default function AboutSection() {
           <div className="relative">
             <div className="relative h-[400px] md:h-[600px] overflow-hidden">
               <img
-                src="/placeholder.svg?height=600&width=500"
+                src="/images/RENDERS/CORNER.png"
                 alt="OPUS MUSIC COMPLEX exterior"
                 className="h-full w-full object-cover"
               />

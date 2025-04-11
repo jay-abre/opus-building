@@ -35,13 +35,13 @@ export default function SpacesSection() {
               <SpaceCard
                 title="Grand Lobby"
                 description="An elegant space perfect for receptions, exhibitions, and networking events with stunning architectural features."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/MAIN LOBBY.png"
                 hasImage={true}
               />
               <SpaceCard
                 title="Sonata Music Hall"
                 description="A versatile mid-sized venue ideal for chamber music, recitals, and intimate performances."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/SON STAGE POV.png"
                 hasImage={true}
               />
               <SpaceCard
@@ -85,7 +85,7 @@ export default function SpacesSection() {
               <SpaceCard
                 title="Outdoor Park"
                 description="A beautifully landscaped area for outdoor performances and relaxation."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/OUTDOOR PARK.jpg"
                 hasImage={true}
               />
               <SpaceCard
@@ -97,19 +97,25 @@ export default function SpacesSection() {
               <SpaceCard
                 title="Upper Plaza"
                 description="An elevated public space with panoramic views of Clark Global City."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/UPPER PLAZA.png"
                 hasImage={true}
               />
               <SpaceCard
                 title="Promenade"
                 description="A scenic walkway connecting different areas of the complex."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/PROMENADE.jpg"
                 hasImage={true}
               />
               <SpaceCard
                 title="Oasis"
                 description="A tranquil indoor garden with water features and acoustic design elements."
-                image="/placeholder.svg?height=400&width=600"
+                image="/images/RENDERS/OASIS.png"
+                hasImage={true}
+              />
+              <SpaceCard
+                title="Alfresco Dining"
+                description="Enjoy a delightful dining experience under the open sky with our al fresco seating."
+                image="/images/RENDERS/AL FRESCO.png"
                 hasImage={true}
               />
               <SpaceCard
